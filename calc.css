@@ -1,0 +1,115 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif; 
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e3f9ff;
+}
+.calculator{
+    /* background: #3a4452; */
+    background: #fff;
+    border: 5px solid black;
+    width: 100%; 
+    max-width: 400px;
+    min-height: 500px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+} 
+.top{
+    width: 95%;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: cornsilk; */
+}
+.rightNav{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    width: 40px; 
+    height: 40px;
+}
+.display{
+    min-height: 250px;
+    padding: 1.5rem;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: coral;
+    color: white;
+    text-align: right;
+    flex: 1 1 0%;
+}
+.display .input{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.display .output{
+    font-size: 3rem;
+    font-weight: 500;
+    max-width: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.display.operator{
+    color: tomato;
+}
+.display .brackets,
+.display .percent{
+    color: rgba(41, 186, 186);
+}
+ .keys{
+    background: transparent;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+    box-shadow: -8px  -8px  15px rgba(255,  255,  255,  0.1), 5px  5px  15px rgba(0,  0,  0,  0.2);
+} 
+.keys .key{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 75%;
+    box-shadow: -8px  -8px  15px rgba(255,  255,  255,  0.1), 5px  5px  15px rgba(0,  0,  0,  0.2);
+    background: transparent;
+    border-radius: 1rem;
+    transition: 0.2s;
+    user-select: none;
+}
+.keys .key span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keys .keys:hover{
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+.keys .key.operator span{
+    color: tomato;
+}
+.keys .key.action span{
+    color: rgba(41, 186, 186);
+} 
